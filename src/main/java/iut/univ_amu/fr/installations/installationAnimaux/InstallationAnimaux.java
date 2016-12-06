@@ -1,7 +1,7 @@
-package iut.univ_amu.fr.batiment.installationAnimaux;
+package iut.univ_amu.fr.installations.installationAnimaux;
 
 import iut.univ_amu.fr.aminaux.Animal;
-import iut.univ_amu.fr.batiment.Installation;
+import iut.univ_amu.fr.installations.Installation;
 
 import java.util.ArrayList;
 

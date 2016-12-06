@@ -1,4 +1,4 @@
-package iut.univ_amu.fr.batiment.installationAnimaux;
+package iut.univ_amu.fr.installations.installationAnimaux;
 
 /**
  * Created by Roche on 25/11/2016.
