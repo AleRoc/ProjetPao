@@ -2,6 +2,7 @@ package iut.univ_amu.fr.aminaux;
 import java.util.Map;
 
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Created by Sylvai on 25/11/2016.
@@ -12,47 +13,42 @@ public abstract class Animal {
     protected int age;
     protected Map<String,Integer> etatSante = new HashMap<String, Integer>(); ;
 
-    int manger( int stockNouriture){
-        return 0;
+    void manger(){
+        etatSante.put("repus",1);
     }
 
     public Animal(String nom, boolean sexe){
         this.nom = nom;
         this.sexe = sexe;
         etatSante.put("vivant", 1);
-        etatSante.put("faim", 0);
-        etatSante.put("malade", 0);
-        etatSante.put("feconde",0);
+        etatSante.put("repus", 0);
         etatSante.put("gestation", 0);
     }
 
-    void vivre(){
-        age++;
-        System.out.println("vie, elle a " + age + " ans" );
-    }
-
-    void accoupler(){
-        if(sexe == false){
-            System.out.println("va attendre un bébé");
-            etatSante.put("gestation", 1);
-        }else{
-            System.out.println("n'est pas féconde");
+    void vivre(int esperanceVie, int tempsGestation){
+        Random rnd = new Random();
+        if(age < esperanceVie ){
+            //Gestion reproduction
+            if(etatSante.get("gestation") != 0 && etatSante.get("gestation") <= tempsGestation) {
+                etatSante.put("gestation", etatSante.get("gestation") + 1);
+            }
+            age++;
+            //Gestion mort "aléatoire" de la vache
+        }else if(age >= esperanceVie && etatSante.get("vivant") == 1){
+            if(20*age + rnd.nextInt(10+ (age * 20)) > 100)
+                mourir();
+            else
+                age++;
         }
     }
 
-    void naissance(){
+    void accoupler(){
+        etatSante.put("gestation", 1);
     }
-
-    void produire(){}
 
     void mourir(){
         System.out.println("meurt");
         etatSante.put("vivant",0);
     }
-
-    public Map<String, Integer> getEtatSante() {
-        return etatSante;
-    }
-
 
 }

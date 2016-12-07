@@ -1,0 +1,59 @@
+package iut.univ_amu.fr.aminaux;
+
+import java.util.Random;
+
+/**
+ * Created by Sylvai on 05/12/2016.
+ */
+public class Poule extends Volaille {
+
+    private static final int TEMPS_GESTATION = 2;
+    private static final int LAIT_PRODUIT = 100;
+    private static final String NOM = "Poule";
+
+    public Poule() {
+        super(NOM, false);
+    }
+
+
+    void manger() {
+        super.manger();
+    }
+
+    int produire() {
+        if(etatSante.get("repus") != 0){
+            etatSante.put("repus" , 0);
+            return LAIT_PRODUIT;
+        }else
+            return 0;
+    }
+
+    void vivre() {
+        super.vivre(ESPERANCE_VIE,TEMPS_GESTATION);
+    }
+
+    @Override
+    void mourir() {
+        super.mourir();
+    }
+
+    @Override
+    void accoupler() {
+        super.accoupler();
+    }
+
+    Volaille naissance() {
+        if(etatSante.get("gestation") > 0 && etatSante.get("gestation") <= TEMPS_GESTATION){
+            Random rnd = new Random();
+            if(rnd.nextBoolean())
+                return new Poule();
+            else
+               return new Coq();
+        }
+        else{
+            etatSante.put("gestation", 0);
+            throw new SecurityException("La Poule ne peut pas acouché");
+        }
+    }
+
+}

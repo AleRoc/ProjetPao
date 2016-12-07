@@ -3,18 +3,18 @@ package iut.univ_amu.fr.aminaux;
 /**
  * Created by Sylvai on 05/12/2016.
  */
-public abstract class Bovin extends Animal{
-
+public abstract class Porcin extends Animal {
     protected static final int ESPERANCE_VIE = 5;
     protected static final int BESOIN_NOURITURE = 20;
     private static final int VIANDE_PRODUIT = 50;
     //todo changer les variable static
-
-    public Bovin(String nom, boolean sexe) {
+    public Porcin(String nom, boolean sexe) {
         super(nom, sexe);
     }
 
-    void manger() {super.manger();}
+    void manger() {
+        super.manger();
+    }
 
     int produireViande() {
         mourir();
