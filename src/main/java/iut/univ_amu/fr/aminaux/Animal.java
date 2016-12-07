@@ -14,7 +14,7 @@ public abstract class Animal {
     protected Map<String,Integer> etatSante = new HashMap<String, Integer>(); ;
 
     void manger(){
-        etatSante.put("repus",1);
+        etatSante.put("repus", 1);
     }
 
     public Animal(String nom, boolean sexe){
@@ -51,4 +51,7 @@ public abstract class Animal {
         etatSante.put("vivant",0);
     }
 
+    public boolean isSexe() {
+        return sexe;
+    }
 }

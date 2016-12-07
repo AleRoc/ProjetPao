@@ -13,9 +13,6 @@ public abstract class Ovide extends Animal {
         super(nom, sexe);
     }
 
-    void manger() {
-        super.manger();
-    }
 
     int produireViande() {
         mourir();
