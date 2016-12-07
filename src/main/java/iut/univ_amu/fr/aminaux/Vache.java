@@ -19,8 +19,8 @@ public class Vache extends Bovin {
         super(NOM, false);
     }
 
-    @Override
-    void vivre(int esperanceVie, int tempsGestation) {
+
+    void vivre() {
         super.vivre(ESPERANCE_VIE, TEMPS_GESTATION);
     }
 
