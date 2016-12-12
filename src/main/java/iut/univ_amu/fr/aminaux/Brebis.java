@@ -28,8 +28,10 @@ public class Brebis extends Ovide {
     void accoupler() {super.accoupler(); }
 
     Ovide naissance() {
-        if(etatSante.get("gestation") >= TEMPS_GESTATION){
+
+        if(etatSante.get("aTerme") == 1){
             etatSante.put("gestation", 0);
+            etatSante.put("aTerme", 0);
             Random rnd = new Random();
             if(rnd.nextBoolean())
                 return new Brebis();

@@ -10,11 +10,14 @@ import java.util.ArrayList;
  */
 public abstract class InstallationAnimaux implements Installation {
 
-    protected static int capaciteOpti;
-    protected static int capaciteMax;
+    protected static int CAPACITEOPTIMAL;
+    protected static int CAPACITEMAXIMAL;
 
     protected ArrayList<Animal> occupants;
 
     protected abstract void ajouterAnimal();
     protected abstract void retirerAnimal();
+    protected abstract void jourFermier();
+    protected abstract void nourireOccupants();
+    protected abstract void naissanceOccupants();
 }

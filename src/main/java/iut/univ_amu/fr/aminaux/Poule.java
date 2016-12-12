@@ -8,7 +8,7 @@ import java.util.Random;
 public class Poule extends Volaille {
 
     private static final int TEMPS_GESTATION = 2;
-    private static final int LAIT_PRODUIT = 100;
+    private static final int OEUF_PRODUIT = 10;
     private static final String NOM = "Poule";
 
     public Poule() {
@@ -23,7 +23,7 @@ public class Poule extends Volaille {
     int produire() {
         if(etatSante.get("repus") != 0){
             etatSante.put("repus" , 0);
-            return LAIT_PRODUIT;
+            return OEUF_PRODUIT;
         }else
             return 0;
     }
@@ -52,8 +52,11 @@ public class Poule extends Volaille {
         }
         else{
             etatSante.put("gestation", 0);
+            etatSante.put("aTerme", 0);
             throw new SecurityException("La Poule ne peut pas acouché");
         }
+
+
     }
 
 }

@@ -11,7 +11,7 @@ public abstract class Animal {
     private String nom;
     private boolean sexe;
     protected int age;
-    protected Map<String,Integer> etatSante = new HashMap<String, Integer>(); ;
+    protected Map<String,Integer> etatSante = new HashMap<String, Integer>();
 
     void manger(){
         etatSante.put("repus", 1);
@@ -22,16 +22,20 @@ public abstract class Animal {
         this.sexe = sexe;
         etatSante.put("vivant", 1);
         etatSante.put("repus", 0);
-        etatSante.put("gestation", 0);
+        if(!this.sexe){
+            etatSante.put("gestation", 0);
+            etatSante.put("aTerme", 0);
+        }
     }
 
     void vivre(int esperanceVie, int tempsGestation){
         Random rnd = new Random();
         if(age < esperanceVie ){
             //Gestion reproduction
-            if(etatSante.get("gestation") != 0 && etatSante.get("gestation") <= tempsGestation) {
+            if(etatSante.get("gestation") != 0 && etatSante.get("gestation") <= tempsGestation)
                 etatSante.put("gestation", etatSante.get("gestation") + 1);
-            }
+            else if(etatSante.get("gestation") != 0 && etatSante.get("gestation") >= tempsGestation)
+                etatSante.put("aTerme",1);
             age++;
             //Gestion mort "aléatoire" de la vache
         }else if(age >= esperanceVie && etatSante.get("vivant") == 1){
@@ -54,4 +58,15 @@ public abstract class Animal {
     public boolean isSexe() {
         return sexe;
     }
+
+    public int statusGestation(int tempsGestation){
+        if(etatSante.get("gestation") == 0)
+            return 0;
+        else if (etatSante.get("gestation") <= tempsGestation)
+            return 1;
+        else
+            return 2;
+
+    }
+
 }
