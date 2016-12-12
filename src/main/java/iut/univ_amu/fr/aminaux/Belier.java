@@ -5,7 +5,7 @@ package iut.univ_amu.fr.aminaux;
  */
 public class Belier extends Ovide {
 
-    private static final String NOM = "Belier";
+    private static final String NOM = "Belier ";
 
     public Belier(){
         super(NOM, true);
