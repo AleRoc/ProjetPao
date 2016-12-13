@@ -21,6 +21,7 @@ public class OffreVente {
         produitsVendus = produits;
         this.prix = prix;
         libelle = produits.get(0).getClass().getName();
+        //TODO il faut réfléchir à la façon dont la date sera gérée: on prend simplement le numero de tour de jeu?
     }
 
     public void ajouterOffreAchat ( OffreAchat offre){

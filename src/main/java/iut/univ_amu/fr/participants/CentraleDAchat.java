@@ -13,4 +13,8 @@ public class CentraleDAchat extends Participant {
     public void faireOffreAchat() {
 
     }
+    public void ajouterMembre (Personne nouvMemrbe){
+        membres.add(nouvMemrbe);
+    }
+
 }
