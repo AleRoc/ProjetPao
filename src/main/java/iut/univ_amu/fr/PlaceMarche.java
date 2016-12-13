@@ -5,7 +5,7 @@ import iut.univ_amu.fr.offre.OffreVente;
 import java.util.ArrayList;
 
 /**
- * Created by Roche on 13/12/2016.
+ ** Created by Roche on 13/12/2016.
  */
 public class PlaceMarche {
     private ArrayList<OffreVente> listeOffres;
@@ -28,6 +28,7 @@ public class PlaceMarche {
             nouvOffre.setNumero(num);
         }
         listeAttente.add(nouvOffre);
+        listeOffres.sort(OffreVente::compareTo);
     }
 
     public void retirerOffreVente (OffreVente offre){

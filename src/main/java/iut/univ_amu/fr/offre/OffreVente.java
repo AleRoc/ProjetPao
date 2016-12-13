@@ -6,11 +6,11 @@ import iut.univ_amu.fr.produit.ProduitFermier;
 import java.util.ArrayList;
 
 /**
- * Created by Roche on 13/12/2016.
+ ** Created by Roche on 13/12/2016.
  */
-public class OffreVente {
+public class OffreVente implements Comparable<OffreVente>{
     private Personne offreur;
-    private int numero = 0;
+    private Integer numero = 0;
     private String libelle;
     private ArrayList<ProduitFermier> produitsVendus;
     private float prix;
@@ -61,5 +61,10 @@ public class OffreVente {
 
     public void setNumero(int numero) {
         this.numero = numero;
+    }
+
+    @Override
+    public int compareTo(OffreVente offre) {
+        return numero.compareTo(offre.numero);
     }
 }
