@@ -39,4 +39,19 @@ public class Bergerie extends InstallationAnimaux {
     protected void naissanceOccupants() {
 
     }
+
+    @Override
+    protected void jourFermier() {
+
+    }
+
+    @Override
+    protected void nourireOccupants() {
+
+    }
+
+    @Override
+    protected void naissanceOccupants() {
+
+    }
 }
