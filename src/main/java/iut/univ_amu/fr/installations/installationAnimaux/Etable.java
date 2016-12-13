@@ -5,12 +5,12 @@ package iut.univ_amu.fr.installations.installationAnimaux;
  */
 public class Etable extends InstallationAnimaux {
 
-    @Override
+
     protected void ajouterAnimal() {
 
     }
 
-    @Override
+
     protected void retirerAnimal() {
 
     }

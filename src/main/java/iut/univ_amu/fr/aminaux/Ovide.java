@@ -14,7 +14,7 @@ public abstract class Ovide extends Animal {
     }
 
 
-    int produireViande() {
+    public int produireViande() {
         mourir();
         return VIANDE_PRODUIT;
     }

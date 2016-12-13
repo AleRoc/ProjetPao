@@ -11,15 +11,15 @@ public class Belier extends Ovide {
         super(NOM, true);
     }
 
-    void vivre(){
+    public void vivre(){
         super.vivre(ESPERANCE_VIE,0);
     }
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
-    void accoupler(Brebis brebis){
+    public void accoupler(Brebis brebis){
         brebis.accoupler();
     }
 

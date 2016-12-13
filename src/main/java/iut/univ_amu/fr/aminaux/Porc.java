@@ -11,15 +11,15 @@ public class Porc extends Porcin {
         super(NOM, true);
     }
 
-    void vivre(){
+    public void vivre(){
         super.vivre(ESPERANCE_VIE, 0);
     }
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
-    void accoupler(Truie truie){
+    public void accoupler(Truie truie){
         truie.accoupler();
     }
 }

@@ -11,7 +11,7 @@ public class Vache extends Bovin {
     private static final String NOM = "Vache";
 
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
@@ -20,14 +20,14 @@ public class Vache extends Bovin {
     }
 
 
-    void vivre() {
+    public void vivre() {
         super.vivre(ESPERANCE_VIE, TEMPS_GESTATION);
     }
 
     @Override
-    void accoupler() {super.accoupler(); }
+    public void accoupler() {super.accoupler(); }
 
-    Bovin naissance() {
+    public Bovin naissance() {
         if(etatSante.get("aTerme") == 1){
             etatSante.put("gestation", 0);
             etatSante.put("aTerme", 0);
@@ -51,7 +51,7 @@ public class Vache extends Bovin {
     }
 
     @Override
-    void mourir() {
+    public void mourir() {
         super.mourir();
     }
 }

@@ -10,15 +10,15 @@ public class Taureau extends Bovin {
         super(NOM, true);
     }
 
-    void vivre(){
+    public void vivre(){
         super.vivre(ESPERANCE_VIE, 0);
     }
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
-    void accoupler(Vache vache){
+   public void accoupler(Vache vache){
         vache.accoupler();
     }
 }

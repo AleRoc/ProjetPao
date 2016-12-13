@@ -28,7 +28,7 @@ public abstract class Animal {
         }
     }
 
-    void vivre(int esperanceVie, int tempsGestation){
+    public void vivre(int esperanceVie, int tempsGestation){
         Random rnd = new Random();
         if(age < esperanceVie ){
             //Gestion reproduction
@@ -69,4 +69,8 @@ public abstract class Animal {
 
     }
 
+
+    public String getNom() {
+        return nom;
+    }
 }

@@ -12,11 +12,11 @@ public abstract class Porcin extends Animal {
         super(nom, sexe);
     }
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
-    int produireViande() {
+    public int produireViande() {
         mourir();
         return VIANDE_PRODUIT;
     }
