@@ -10,10 +10,6 @@ public class CentraleDAchat extends Participant {
     private ArrayList<Personne> membres;
 
     @Override
-    public void faireOffreVente() {
-
-    }
-    @Override
     public void faireOffreAchat() {
 
     }
