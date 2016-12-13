@@ -15,6 +15,11 @@ public abstract class InstallationAnimaux implements Installation {
 
     protected ArrayList<Animal> occupants;
 
-    protected abstract void ajouterAnimal();
-    protected abstract void retirerAnimal();
+    protected abstract void ajouterAnimal(Animal a);
+
+    protected abstract void retirerAnimal(Animal animal);
+
+    protected ArrayList<Animal> getOccupants() {
+        return occupants;
+    }
 }

@@ -8,6 +8,7 @@ import java.util.Random;
  * Created by Sylvai on 25/11/2016.
  */
 public abstract class Animal {
+    private int numA;
     private String nom;
     private boolean sexe;
     protected int age;
