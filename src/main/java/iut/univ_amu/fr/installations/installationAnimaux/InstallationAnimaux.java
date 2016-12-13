@@ -10,8 +10,8 @@ import java.util.ArrayList;
  */
 public abstract class InstallationAnimaux implements Installation {
 
-    protected static int CAPACITEOPTIMAL;
-    protected static int CAPACITEMAXIMAL;
+    protected static int CAPACITE_OPTIMAL;
+    protected static int CAPACITE_MAXIMAL;
 
     protected ArrayList<Animal> occupants;
 
