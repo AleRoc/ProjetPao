@@ -8,7 +8,13 @@ import java.util.ArrayList;
  * Created by louis on 06/12/2016.
  */
 public abstract class Personne extends Participant {
+
+    private String nom;
+    private String prenom;
+    private int age;
+
     private float argent;
+
     private ArrayList<Installation> propriétés;
     private ArrayList<CentraleDAchat> adherences;
     public abstract void faireOffreVente();

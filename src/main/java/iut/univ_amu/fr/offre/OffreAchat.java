@@ -10,7 +10,7 @@ import java.util.Date;
 public class OffreAchat {
     private Personne acheteur;
     private float enchere;
-    private Date date;
+    private int date;
 
     public OffreAchat (Personne acheteur, float enchere){
         this.acheteur = acheteur;
@@ -18,11 +18,16 @@ public class OffreAchat {
     }
 
     // getters
+
     public Personne getAcheteur() {
         return acheteur;
     }
 
     public float getEnchere() {
         return enchere;
+    }
+
+    public int getDate() {
+        return date;
     }
 }
