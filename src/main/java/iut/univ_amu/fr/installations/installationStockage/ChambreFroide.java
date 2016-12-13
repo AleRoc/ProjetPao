@@ -5,11 +5,6 @@ package iut.univ_amu.fr.installations.installationStockage;
  */
 public class ChambreFroide extends InstallationStockage {
 
-    private int volMax;
-    private int vol;
-
-    //private ArrayList<Produit> stock;
-
     public void ajouterProduit() {
 
     }
