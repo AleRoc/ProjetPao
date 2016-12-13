@@ -10,15 +10,15 @@ public class Coq extends Volaille {
         super(NOM, true);
     }
 
-    void vivre(){
+    public void vivre(){
         super.vivre(ESPERANCE_VIE,0);
     }
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
-    void accoupler(Poule poule){
+    public void accoupler(Poule poule){
         poule.accoupler();
     }
 

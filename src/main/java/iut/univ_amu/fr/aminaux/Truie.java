@@ -15,11 +15,11 @@ public class Truie extends Porcin {
     }
 
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
-    int produire() {
+    public int produire() {
         if(etatSante.get("repus") != 0){
             etatSante.put("repus" , 0);
             return LAIT_PRODUIT;
@@ -27,23 +27,24 @@ public class Truie extends Porcin {
             return 0;
     }
 
-    void vivre() {
+    public void vivre() {
         super.vivre(ESPERANCE_VIE,TEMPS_GESTATION);
     }
 
     @Override
-    void mourir() {
+    public void mourir() {
         super.mourir();
     }
 
     @Override
-    void accoupler() {
+    public void accoupler() {
         super.accoupler();
     }
 
     Porcin naissance() {
-        if(etatSante.get("gestation") >= TEMPS_GESTATION){
+        if(etatSante.get("aTerme") == 1){
             etatSante.put("gestation", 0);
+            etatSante.put("aTerme", 0);
             Random rnd = new Random();
             if(rnd.nextBoolean()){
                 System.out.println("une vache est née");

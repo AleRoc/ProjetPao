@@ -7,7 +7,7 @@ public abstract class Bovin extends Animal{
 
     protected static final int ESPERANCE_VIE = 5;
     protected static final int BESOIN_NOURITURE = 20;
-    private static final int VIANDE_PRODUIT = 50;
+    protected static final int VIANDE_PRODUIT = 50;
     //todo changer les variable static
 
     public Bovin(String nom, boolean sexe) {

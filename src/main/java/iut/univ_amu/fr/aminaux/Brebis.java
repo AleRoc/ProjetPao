@@ -12,7 +12,7 @@ public class Brebis extends Ovide {
     private static final String NOM = "Brebis";
 
 
-    void manger() {
+    public void manger() {
         super.manger();
     }
 
@@ -20,16 +20,18 @@ public class Brebis extends Ovide {
         super(NOM, false);
     }
 
-    void vivre() {
+    public void vivre() {
         super.vivre(ESPERANCE_VIE, TEMPS_GESTATION);
     }
 
     @Override
-    void accoupler() {super.accoupler(); }
+    public void accoupler() {super.accoupler(); }
 
     Ovide naissance() {
-        if(etatSante.get("gestation") >= TEMPS_GESTATION){
+
+        if(etatSante.get("aTerme") == 1){
             etatSante.put("gestation", 0);
+            etatSante.put("aTerme", 0);
             Random rnd = new Random();
             if(rnd.nextBoolean())
                 return new Brebis();
@@ -37,11 +39,11 @@ public class Brebis extends Ovide {
                 return new Belier();
         }
         else
-            throw new SecurityException("La vache ne peut pas acouché");
+            throw new SecurityException("La Brebis ne peut pas acouché");
 
     }
 
-    int produire() {
+    public int produire() {
         if(etatSante.get("repus") != 0){
             etatSante.put("repus" , 0);
             return LAIT_PRODUIT;
@@ -50,7 +52,7 @@ public class Brebis extends Ovide {
     }
 
     @Override
-    void mourir() {
+    public void mourir() {
         super.mourir();
     }
 }
