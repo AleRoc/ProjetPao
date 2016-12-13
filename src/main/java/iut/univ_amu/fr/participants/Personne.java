@@ -10,4 +10,7 @@ import java.util.ArrayList;
 public abstract class Personne extends Participant {
     private int argent;
     private ArrayList<Installation> propriétés;
+
+
+    public abstract void faireOffreVente();
 }

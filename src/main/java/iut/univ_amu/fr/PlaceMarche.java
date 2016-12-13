@@ -1,6 +1,6 @@
 package iut.univ_amu.fr;
 
-import iut.univ_amu.fr.Offre.OffreVente;
+import iut.univ_amu.fr.offre.OffreVente;
 
 import java.util.ArrayList;
 
@@ -12,20 +12,21 @@ public class PlaceMarche {
     private ArrayList<OffreVente> listeAttente;
 
     public void ajouterOffreVente (OffreVente nouvOffre){
-        int num = 0;
-        if (listeOffres.size()==0)
-        {
+        int num = 1;
+        if (listeOffres.size()==0){
             nouvOffre.setNumero(num);
+            return;
         }
-        else
-            for (OffreVente offre : listeOffres)
-            {
-                if(num != offre.getNumero()){
+        else {
+            for (OffreVente offre : listeAttente) {
+                if (num != offre.getNumero()) {
                     nouvOffre.setNumero(num);
-                    break;
+                    return;
                 }
                 num++;
             }
+            nouvOffre.setNumero(num);
+        }
         listeAttente.add(nouvOffre);
     }
 
