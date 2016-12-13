@@ -10,20 +10,16 @@ public class VacheTest extends TestCase {
 
     Vache vache = new Vache();
     public void testManger() throws Exception {
-        int stock = 30;
-       stock = vache.manger(stock);
-        vache.manger(stock);
+
     }
 
     public void testVivre() throws Exception {
         int stock = 10;
-        vache.vivre(stock);
-        vache.vivre(stock);
-        vache.vivre(stock);
-        vache.vivre(stock);
-        vache.vivre(stock);
-        vache.vivre(stock);
-        vache.vivre(stock);
+        vache.vivre();
+        vache.vivre();
+        vache.vivre();
+        vache.vivre();
+        vache.vivre();
     }
 
     public void testAccoupler() throws Exception {

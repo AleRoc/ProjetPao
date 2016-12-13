@@ -14,4 +14,19 @@ public class Poulailler extends InstallationAnimaux {
     protected void retirerAnimal() {
 
     }
+
+    @Override
+    protected void jourFermier() {
+
+    }
+
+    @Override
+    protected void nourireOccupants() {
+
+    }
+
+    @Override
+    protected void naissanceOccupants() {
+
+    }
 }

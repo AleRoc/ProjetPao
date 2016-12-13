@@ -1,24 +1,24 @@
 package iut.univ_amu.fr.aminaux;
+
 import java.util.Random;
 
 /**
- * Created by Sylvai on 25/11/2016.
+ * Created by Sylvai on 07/12/2016.
  */
-public class Vache extends Bovin {
+public class Brebis extends Ovide {
 
     private static final int TEMPS_GESTATION = 2;
     private static final int LAIT_PRODUIT = 100;
-    private static final String NOM = "Vache";
+    private static final String NOM = "Brebis";
 
 
     void manger() {
         super.manger();
     }
 
-    public Vache() {
+    public Brebis() {
         super(NOM, false);
     }
-
 
     void vivre() {
         super.vivre(ESPERANCE_VIE, TEMPS_GESTATION);
@@ -27,15 +27,16 @@ public class Vache extends Bovin {
     @Override
     void accoupler() {super.accoupler(); }
 
-    Bovin naissance() {
+    Ovide naissance() {
+
         if(etatSante.get("aTerme") == 1){
             etatSante.put("gestation", 0);
             etatSante.put("aTerme", 0);
             Random rnd = new Random();
             if(rnd.nextBoolean())
-                return new Vache();
+                return new Brebis();
             else
-                return new Taureau();
+                return new Belier();
         }
         else
             throw new SecurityException("La vache ne peut pas acouché");
