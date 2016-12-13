@@ -1,4 +1,4 @@
-package iut.univ_amu.fr.Offre;
+package iut.univ_amu.fr.offre;
 
 import iut.univ_amu.fr.participants.Personne;
 
@@ -17,6 +17,7 @@ public class OffreAchat {
         this.enchere = enchere;
     }
 
+    // getters
     public Personne getAcheteur() {
         return acheteur;
     }

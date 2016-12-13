@@ -1,5 +1,6 @@
-package iut.univ_amu.fr.Offre;
+package iut.univ_amu.fr.offre;
 
+import iut.univ_amu.fr.participants.Personne;
 import iut.univ_amu.fr.produit.ProduitFermier;
 
 import java.util.ArrayList;
@@ -8,7 +9,8 @@ import java.util.ArrayList;
  * Created by Roche on 13/12/2016.
  */
 public class OffreVente {
-    private int numero;
+    private Personne offreur;
+    private int numero = 0;
     private String libelle;
     private ArrayList<ProduitFermier> produitsVendus;
     private float prix;
@@ -27,6 +29,10 @@ public class OffreVente {
 
     //getters
 
+    public Personne getOffreur() {
+        return offreur;
+    }
+
     public int getNumero() {
         return numero;
     }
@@ -41,6 +47,10 @@ public class OffreVente {
 
     public float getPrix() {
         return prix;
+    }
+
+    public int getDate() {
+        return date;
     }
 
     public ArrayList<OffreAchat> getOffresAchat() {
