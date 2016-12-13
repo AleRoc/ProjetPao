@@ -5,7 +5,5 @@ package iut.univ_amu.fr.participants;
  */
 public abstract class Participant {
     private String nom;
-
-    public abstract void faireOffreVente();
     public abstract void faireOffreAchat();
 }
