@@ -1,4 +1,4 @@
-package iut.univ_amu.fr;
+package iut.univ_amu.fr.marche;
 
 import iut.univ_amu.fr.offre.OffreVente;
 
