@@ -15,9 +15,9 @@ public class GestionAchats extends JFrame  implements ActionListener {
 
     public GestionAchats() {
         InterfaceDeJeu frame = new InterfaceDeJeu();
-        frame.getPanJeu().setBorder(BorderFactory.createLineBorder(Color.red));
-        frame.getPanJeu().add(bListe);
-        frame.getPanJeu().add(lOffreVente);
+        frame.getScreen().setBorder(BorderFactory.createLineBorder(Color.red));
+        frame.getScreen().add(bListe);
+        frame.getScreen().add(lOffreVente);
         bListe.addActionListener(this);
         lOffreVente.setText("/*toutlemonde.getOffreVentes().toString()*/");
     }

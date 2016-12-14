@@ -25,8 +25,8 @@ public class GestionAnimaux extends JFrame  implements ActionListener {
 
     public GestionAnimaux(){
         InterfaceDeJeu frame = new InterfaceDeJeu();
-        frame.getPanJeu().setBorder(BorderFactory.createLineBorder(Color.red));
-        frame.getPanJeu().add(bListe);
+        frame.getScreen().setBorder(BorderFactory.createLineBorder(Color.red));
+        frame.getScreen().add(bListe);
         bListe.addActionListener(this);
     }
 
