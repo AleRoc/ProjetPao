@@ -5,9 +5,12 @@ package iut.univ_amu.fr.aminaux;
  */
 public class Taureau extends Bovin {
     private static final String NOM = "Taureau";
+    private static final String SEXE = "Male";
+    private static int nbTaureauConstruit = 1;
 
     public Taureau() {
-        super(NOM, true);
+        super(nbTaureauConstruit, NOM, SEXE);
+        ++nbTaureauConstruit;
     }
 
     public void vivre(){

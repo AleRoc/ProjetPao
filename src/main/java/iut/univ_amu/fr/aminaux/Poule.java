@@ -10,9 +10,12 @@ public class Poule extends Volaille {
     private static final int TEMPS_GESTATION = 2;
     private static final int OEUF_PRODUIT = 10;
     private static final String NOM = "Poule";
+    private static final String SEXE = "Femelle";
+    private static int nbPouleConstruit = 1;
 
     public Poule() {
-        super(NOM, false);
+        super(nbPouleConstruit, NOM, SEXE);
+        ++nbPouleConstruit;
     }
 
 
@@ -45,10 +48,12 @@ public class Poule extends Volaille {
     public Volaille naissance() {
         if(etatSante.get("gestation") > 0 && etatSante.get("gestation") <= TEMPS_GESTATION){
             Random rnd = new Random();
-            if(rnd.nextBoolean())
+            if(rnd.nextBoolean()) {
                 return new Poule();
-            else
-               return new Coq();
+            }
+            else {
+                return new Coq();
+            }
         }
         else{
             etatSante.put("gestation", 0);

@@ -10,8 +10,8 @@ public abstract class Bovin extends Animal{
     protected static final int VIANDE_PRODUIT = 50;
     //todo changer les variable static
 
-    public Bovin(String nom, boolean sexe) {
-        super(nom, sexe);
+    public Bovin(int num, String nom, String sexe) {
+        super(num, nom, sexe);
     }
 
     void manger() {super.manger();}

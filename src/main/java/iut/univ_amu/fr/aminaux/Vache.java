@@ -9,14 +9,16 @@ public class Vache extends Bovin {
     private static final int TEMPS_GESTATION = 2;
     private static final int LAIT_PRODUIT = 100;
     private static final String NOM = "Vache";
-
+    private static final String SEXE = "Femelle";
+    private static int nbVacheConstruit = 1;
 
     public void manger() {
         super.manger();
     }
 
     public Vache() {
-        super(NOM, false);
+        super(nbVacheConstruit, NOM, SEXE);
+        ++nbVacheConstruit;
     }
 
 
@@ -27,15 +29,18 @@ public class Vache extends Bovin {
     @Override
     public void accoupler() {super.accoupler(); }
 
+
     public Bovin naissance() {
         if(etatSante.get("aTerme") == 1){
             etatSante.put("gestation", 0);
             etatSante.put("aTerme", 0);
             Random rnd = new Random();
-            if(rnd.nextBoolean())
+            if(rnd.nextBoolean()) {
                 return new Vache();
-            else
+            }
+            else{
                 return new Taureau();
+            }
         }
         else
             throw new SecurityException("La vache ne peut pas acouché");

@@ -8,8 +8,8 @@ public abstract class Porcin extends Animal {
     protected static final int BESOIN_NOURITURE = 20;
     private static final int VIANDE_PRODUIT = 50;
     //todo changer les variable static
-    public Porcin(String nom, boolean sexe) {
-        super(nom, sexe);
+    public Porcin(int num, String nom, String sexe) {
+        super(num, nom, sexe);
     }
 
     public void manger() {

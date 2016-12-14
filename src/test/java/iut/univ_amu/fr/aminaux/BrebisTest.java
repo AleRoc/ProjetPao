@@ -29,9 +29,9 @@ public class BrebisTest extends TestCase {
         brebis.vivre();
         System.out.println("Gestation de la brebis : " + brebis.etatSante.get("gestation"));
         brebis.vivre();
-        Ovide ovide = brebis.naissance();
+        //Ovide ovide = brebis.naissance();
         System.out.println("Gestation de la brebis : " + brebis.etatSante.get("gestation"));
-        System.out.println("Sexe du bébé :" + ovide.isSexe());
+        //System.out.println("Sexe du bébé :" + ovide.isMale());
     }
 
     public void testProduire() throws Exception {

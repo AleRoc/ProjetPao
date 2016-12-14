@@ -9,9 +9,12 @@ public class Truie extends Porcin {
     private static final int TEMPS_GESTATION = 2;
     private static final int LAIT_PRODUIT = 100;
     private static final String NOM = "Truie";
+    private static final String SEXE = "Femelle";
+    private static int nbTruieConstruit = 1;
 
     public Truie() {
-        super(NOM, false);
+        super(nbTruieConstruit, NOM, SEXE);
+        ++nbTruieConstruit;
     }
 
 
@@ -47,16 +50,16 @@ public class Truie extends Porcin {
             etatSante.put("aTerme", 0);
             Random rnd = new Random();
             if(rnd.nextBoolean()){
-                System.out.println("une vache est née");
+                System.out.println("une truie est née");
                 return new Truie();
             }
             else{
-                System.out.println("un taureau est née");
+                System.out.println("un porc est né");
                 return new Porc();
             }
         }
         else{
-            throw new SecurityException("La vache ne peut pas acouché");
+            throw new SecurityException("Le porc ne peut pas acouché");
         }
     }
 }

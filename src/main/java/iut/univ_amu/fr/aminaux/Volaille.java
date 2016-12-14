@@ -9,8 +9,8 @@ public abstract class Volaille extends Animal{
     protected static final int OEUF_PRODUIT = 4;
     protected static final int VIANDE_PRODUIT = 50;
     //todo changer les valeurs des variables
-    public Volaille(String nom, boolean sexe) {
-        super(nom, sexe);
+    public Volaille(int num, String nom, String sexe) {
+        super(num, nom, sexe);
     }
     
 
