@@ -20,6 +20,6 @@ public class BergerieTest extends TestCase {
         bergerie.ajouterAnimal(brebis);
         bergerie.ajouterAnimal(trui);
         bergerie.ajouterAnimal(belier);
-        bergerie.affichierAbitant();
+        //bergerie.affichierAbitant();
     }
 }

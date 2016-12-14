@@ -21,7 +21,7 @@ public class GestionAnimaux extends JFrame  implements ActionListener {
 
 
 
-    private ArrayList<Animal> listeA = bergerie.getOccupants();
+    private ArrayList<Animal> listeA;
 
     public GestionAnimaux(){
         InterfaceDeJeu frame = new InterfaceDeJeu();

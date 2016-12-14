@@ -9,8 +9,9 @@ import java.util.ArrayList;
  * Created by Roche on 25/11/2016.
  */
 public class Porcherie extends InstallationAnimaux {
-    protected static int capaciteOpti;
-    protected static int capaciteMax;
-    protected ArrayList<Porcin> occupants;
+    protected ArrayList<Porcin> occupants = new ArrayList<Porcin>();
+    protected int capaciteActuelle = occupants.size();
+    protected int capaciteMax;
+
 
 }

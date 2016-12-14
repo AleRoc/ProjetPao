@@ -10,6 +10,11 @@ public class ProducteurDeViande extends Personne {
     }
 
     @Override
+    public void adhererCentrale(CentraleDAchat centrale) {
+
+    }
+
+    @Override
     public void faireOffreAchat() {
 
     }

@@ -10,7 +10,13 @@ public class ProducteurLaitier extends Personne {
     }
 
     @Override
+    public void adhererCentrale(CentraleDAchat centrale) {
+
+    }
+
+    @Override
     public void faireOffreAchat() {
 
     }
+
 }

@@ -11,6 +11,11 @@ public class Grossiste extends Personne {
     }
 
     @Override
+    public void adhererCentrale(CentraleDAchat centrale) {
+
+    }
+
+    @Override
     public void faireOffreAchat() {
 
     }

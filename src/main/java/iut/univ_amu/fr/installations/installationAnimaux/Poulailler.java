@@ -9,8 +9,9 @@ import java.util.ArrayList;
  * Created by Roche on 25/11/2016.
  */
 public class Poulailler extends InstallationAnimaux {
-    protected static int capaciteOpti;
-    protected static int capaciteMax;
-    protected ArrayList<Volaille> occupants;
+    protected ArrayList<Volaille> occupants = new ArrayList<Volaille>();
+    protected int capaciteActuelle = occupants.size();
+    protected int capaciteMax;
+
 
 }
