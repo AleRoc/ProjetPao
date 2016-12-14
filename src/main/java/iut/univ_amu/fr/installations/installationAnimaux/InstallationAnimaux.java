@@ -10,14 +10,27 @@ import java.util.ArrayList;
  */
 public abstract class InstallationAnimaux implements Installation {
 
-    protected static int CAPACITE_OPTIMAL;
-    protected static int CAPACITE_MAXIMAL;
+    protected static int capaciteOpti;
+    protected static int capaciteMax;
 
     protected ArrayList<Animal> occupants;
 
-    protected abstract void ajouterAnimal();
-    protected abstract void retirerAnimal();
-    protected abstract void jourFermier();
-    protected abstract void nourireOccupants();
-    protected abstract void naissanceOccupants();
+    protected void ajouterAnimal(Animal a) {
+        occupants.add(a);
+    }
+
+    protected void retirerAnimal(Animal animal) {
+        for (int i=0; i<occupants.size(); ++i) {
+            if (occupants.get(i) == animal)
+                occupants.set(i, null);
+            else
+                System.out.print("Animal non présent dans le tableau");
+        }
+        for (int i=0; i<occupants.size(); ++i) {
+            if (occupants.get(i) == null) {
+                occupants.set(i, occupants.get(++i));
+            }
+        }
+    }
+
 }

@@ -1,32 +1,16 @@
 package iut.univ_amu.fr.installations.installationAnimaux;
 
+import iut.univ_amu.fr.aminaux.Animal;
+import iut.univ_amu.fr.aminaux.Ovide;
+
+import java.util.ArrayList;
+
 /**
  * Created by Roche on 25/11/2016.
  */
 public class Bergerie extends InstallationAnimaux {
+    protected static int capaciteOpti;
+    protected static int capaciteMax;
+    protected ArrayList<Ovide> occupants;
 
-    @Override
-    protected void ajouterAnimal() {
-
-    }
-
-    @Override
-    protected void retirerAnimal() {
-
-    }
-
-    @Override
-    protected void jourFermier() {
-
-    }
-
-    @Override
-    protected void nourireOccupants() {
-
-    }
-
-    @Override
-    protected void naissanceOccupants() {
-
-    }
 }

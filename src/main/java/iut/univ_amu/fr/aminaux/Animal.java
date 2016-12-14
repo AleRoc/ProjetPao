@@ -8,6 +8,7 @@ import java.util.Random;
  * Created by Sylvai on 25/11/2016.
  */
 public abstract class Animal {
+    private int numA;
     private String nom;
     private boolean sexe;
     protected int age;
@@ -28,7 +29,7 @@ public abstract class Animal {
         }
     }
 
-    void vivre(int esperanceVie, int tempsGestation){
+    public void vivre(int esperanceVie, int tempsGestation){
         Random rnd = new Random();
         if(age < esperanceVie ){
             //Gestion reproduction
@@ -69,4 +70,8 @@ public abstract class Animal {
 
     }
 
+
+    public String getNom() {
+        return nom;
+    }
 }
