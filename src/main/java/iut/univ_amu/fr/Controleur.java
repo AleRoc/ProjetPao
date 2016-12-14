@@ -1,6 +1,7 @@
 package iut.univ_amu.fr;
 
 
+        import iut.univ_amu.fr.marche.PlaceMarche;
         import iut.univ_amu.fr.offre.OffreVente;
 
         import java.util.ArrayList;
