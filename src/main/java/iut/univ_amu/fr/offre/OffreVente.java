@@ -17,7 +17,7 @@ public class OffreVente implements Comparable<OffreVente>{
     private int date;
     private ArrayList<OffreAchat> offresAchat;
 
-    public OffreVente (ArrayList<ProduitFermier> produits, float prix){
+    public OffreVente (ArrayList<ProduitFermier> produits, float prix, Personne vendeur){
         produitsVendus = produits;
         this.prix = prix;
         libelle = produits.get(0).getClass().getName();
