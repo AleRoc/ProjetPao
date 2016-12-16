@@ -9,12 +9,10 @@ public class Truie extends Porcin {
     private static final int TEMPS_GESTATION = 2;
     private static final int LAIT_PRODUIT = 100;
     private static final String NOM = "Truie";
-    private static final String SEXE = "Femelle";
-    private static int nbTruieConstruit = 1;
+    private static final boolean ESTMALE = false;
 
     public Truie() {
-        super(nbTruieConstruit, NOM, SEXE);
-        ++nbTruieConstruit;
+        super(NOM, ESTMALE);
     }
 
 

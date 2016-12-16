@@ -28,7 +28,7 @@ public class PlaceMarche {
             nouvOffre.setNumero(num);
         }
         listeAttente.add(nouvOffre);
-        listeOffres.sort(OffreVente::compareTo);
+//        listeOffres.sort(OffreVente::compareTo);
     }
 
     public void retirerOffreVente (OffreVente offre){

@@ -9,8 +9,8 @@ public abstract class Ovide extends Animal {
     private static final int VIANDE_PRODUIT = 50;
     //todo changer les variable static
 
-    public Ovide(int num, String nom, String sexe) {
-        super(num, nom, sexe);
+    public Ovide(String nom, boolean estmale ) {
+        super(nom, estmale);
     }
 
 

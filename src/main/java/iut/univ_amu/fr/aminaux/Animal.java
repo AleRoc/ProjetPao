@@ -8,29 +8,27 @@ import java.util.Random;
  * Created by Sylvai on 25/11/2016.
  */
 public abstract class Animal {
-    private int numA;
-    private String nom;
-    private String sexe;
+    private static String NOM;
+    private static boolean ESTMALE;
     private String etat;
     protected int age;
     protected Map<String,Integer> etatSante = new HashMap<String, Integer>();
 
-    //TODO que signifie l'integer de la Map ?
-    //TODO la classe est belier est celle de référence il faut la rendre la plus simple possible.
-    //TODO le nom et le sexe et le num sont définis automatiquement en fonction du constructeur qu'on utilise
+    //Que signifie l'integer de la Map ?
+    //La classe est belier est celle de référence il faut la rendre la plus simple possible.
+    //Le nom et le sexe et le num sont définis automatiquement en fonction du constructeur qu'on utilise
     //J'ai mis une variable etat et passer Sexe en String ce qui est plus conforme
 
     void manger(){
         etatSante.put("repus", 1);
     }
 
-    public Animal(int numA, String nom, String sexe){
-        this.numA = numA;
-        this.nom = nom;
-        this.sexe = sexe;
+    public Animal(String nom, boolean sexe){
+        this.NOM = nom;
+        this.ESTMALE = sexe;
         etatSante.put("vivant", 1);
         etatSante.put("repus", 0);
-        if(sexe == "femelle"){
+        if(!ESTMALE){
             etatSante.put("gestation", 0);
             etatSante.put("aTerme", 0);
         }
@@ -63,13 +61,8 @@ public abstract class Animal {
         etatSante.put("vivant",0);
     }
 
-    public boolean isMale() {
-        if (sexe == "male") return true;
-        else return false;
-    }
-    public boolean isFemelle() {
-        if (sexe == "femelle") return true;
-        else return false;
+    public boolean sonSexe() {
+        return ESTMALE;
     }
 
     public int statusGestation(int tempsGestation){
@@ -82,12 +75,7 @@ public abstract class Animal {
 
     }
 
-
     public String getNom() {
-        return nom;
-    }
-
-    public int getNumA() {
-        return numA;
+        return NOM;
     }
 }

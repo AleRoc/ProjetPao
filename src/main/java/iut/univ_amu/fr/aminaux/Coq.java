@@ -5,12 +5,10 @@ package iut.univ_amu.fr.aminaux;
  */
 public class Coq extends Volaille {
     private static final String NOM = "Coq";
-    private static final String SEXE = "Male";
-    private static int nbCoqConstruit = 1;
+    private static final boolean ESTMALE = true;
 
     public Coq() {
-        super(nbCoqConstruit, NOM, SEXE);
-        ++nbCoqConstruit;
+        super(NOM, ESTMALE);
     }
 
     public void vivre(){

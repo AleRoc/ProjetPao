@@ -5,12 +5,10 @@ package iut.univ_amu.fr.aminaux;
  */
 public class Belier extends Ovide {
     private static final String NOM = "Belier";
-    private static final String SEXE = "Male";
-    private static int nbBeliersConstruit = 1;
+    private static final boolean ESTMALE = true;
 
     public Belier() {
-        super(nbBeliersConstruit, NOM, SEXE);
-        ++nbBeliersConstruit;
+        super(NOM ,ESTMALE);
     }
 
     void vivre(){

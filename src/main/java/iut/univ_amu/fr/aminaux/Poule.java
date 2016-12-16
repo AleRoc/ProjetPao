@@ -10,12 +10,10 @@ public class Poule extends Volaille {
     private static final int TEMPS_GESTATION = 2;
     private static final int OEUF_PRODUIT = 10;
     private static final String NOM = "Poule";
-    private static final String SEXE = "Femelle";
-    private static int nbPouleConstruit = 1;
+    private static final boolean ESTMALE = false;
 
     public Poule() {
-        super(nbPouleConstruit, NOM, SEXE);
-        ++nbPouleConstruit;
+        super(NOM, ESTMALE);
     }
 
 

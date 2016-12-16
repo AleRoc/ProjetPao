@@ -10,8 +10,7 @@ public class Brebis extends Ovide {
     private static final int TEMPS_GESTATION = 2;
     private static final int LAIT_PRODUIT = 100;
     private static final String NOM = "Brebis";
-    private static final String SEXE = "Femelle";
-    private static int nbBrebisConstruit = 1;
+    private static final boolean ESTMALE = false;
 
 
     public void manger() {
@@ -19,8 +18,7 @@ public class Brebis extends Ovide {
     }
 
     public Brebis() {
-        super(nbBrebisConstruit, NOM, SEXE);
-        ++nbBrebisConstruit;
+        super(NOM, ESTMALE);
     }
 
     public void vivre() {

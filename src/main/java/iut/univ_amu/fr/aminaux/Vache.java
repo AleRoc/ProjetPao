@@ -9,16 +9,14 @@ public class Vache extends Bovin {
     private static final int TEMPS_GESTATION = 2;
     private static final int LAIT_PRODUIT = 100;
     private static final String NOM = "Vache";
-    private static final String SEXE = "Femelle";
-    private static int nbVacheConstruit = 1;
+    private static final boolean ESTMALE = false;
 
     public void manger() {
         super.manger();
     }
 
     public Vache() {
-        super(nbVacheConstruit, NOM, SEXE);
-        ++nbVacheConstruit;
+        super(NOM, ESTMALE);
     }
 
 

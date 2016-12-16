@@ -6,12 +6,10 @@ package iut.univ_amu.fr.aminaux;
 public class Porc extends Porcin {
 
     private static final String NOM = "Porc";
-    private static final String SEXE = "Male";
-    private static int nbPorcConstruit = 1;
+    private static final boolean ESTMALE = true;
 
     public Porc() {
-        super(nbPorcConstruit, NOM, SEXE);
-        ++nbPorcConstruit;
+        super(NOM, ESTMALE);
     }
 
     public void vivre(){

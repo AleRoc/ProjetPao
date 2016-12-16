@@ -11,15 +11,18 @@ import junit.framework.TestCase;
 public class BergerieTest extends TestCase {
 
 
-    Brebis brebis = new Brebis();
+    Brebis brebis1 = new Brebis();
     Belier belier = new Belier();
-    Truie trui = new Truie();
+    Brebis brebis2 = new Brebis();
 
-    public void testJourFermier() throws Exception {
+    public void test_Ajouter_Supprimer_Afficher() throws Exception {
         Bergerie bergerie = new Bergerie();
-        bergerie.ajouterAnimal(brebis);
-        bergerie.ajouterAnimal(trui);
+        bergerie.ajouterAnimal(brebis1);
+        bergerie.ajouterAnimal(brebis2);
         bergerie.ajouterAnimal(belier);
-        //bergerie.affichierAbitant();
+        bergerie.affichierAbitant();
+        bergerie.retirerAnimal(brebis1);
+        bergerie.affichierAbitant();
+
     }
 }
