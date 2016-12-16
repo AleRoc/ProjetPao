@@ -11,6 +11,14 @@ public class Taureau extends Bovin {
         super(NOM, ESTMALE);
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Taureau{" + NOM + " " + sexe + "}";
+    }
+
     public void vivre(){
         super.vivre(ESPERANCE_VIE, 0);
     }

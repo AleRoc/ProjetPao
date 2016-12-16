@@ -14,11 +14,6 @@ public abstract class Animal {
     protected int age;
     protected Map<String,Integer> etatSante = new HashMap<String, Integer>();
 
-    //Que signifie l'integer de la Map ?
-    //La classe est belier est celle de référence il faut la rendre la plus simple possible.
-    //Le nom et le sexe et le num sont définis automatiquement en fonction du constructeur qu'on utilise
-    //J'ai mis une variable etat et passer Sexe en String ce qui est plus conforme
-
     void manger(){
         etatSante.put("repus", 1);
     }

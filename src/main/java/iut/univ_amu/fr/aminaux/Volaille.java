@@ -7,7 +7,7 @@ public abstract class Volaille extends Animal{
     protected static final int ESPERANCE_VIE = 5;
     protected static final int BESOIN_NOURITURE = 20;
     protected static final int OEUF_PRODUIT = 4;
-    protected static final int VIANDE_PRODUIT = 50;
+    protected static final int VIANDE_PRODUIT = 2;
     //todo changer les valeurs des variables
     public Volaille(String nom, boolean estmale) {
         super( nom, estmale);

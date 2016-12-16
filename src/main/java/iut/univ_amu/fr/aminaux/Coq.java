@@ -11,6 +11,14 @@ public class Coq extends Volaille {
         super(NOM, ESTMALE);
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Coq{" + NOM + " " + sexe + "}";
+    }
+
     public void vivre(){
         super.vivre(ESPERANCE_VIE,0);
     }

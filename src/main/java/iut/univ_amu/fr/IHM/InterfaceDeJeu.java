@@ -29,7 +29,6 @@ public class InterfaceDeJeu extends JFrame implements ActionListener {
         this.setSize(900, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setContentPane(screen);
 
         JToolBar toolbar = new JToolBar();
         toolbar.setRollover(true);
@@ -38,6 +37,7 @@ public class InterfaceDeJeu extends JFrame implements ActionListener {
         toolbar.add(bGererVentes);
         toolbar.addSeparator();
         toolbar.add(bGererAnimaux);
+        toolbar.add(new JComboBox(new String[]{"A","B","C"}));
         toolbar.addSeparator();
         toolbar.add(bGererStock);
         toolbar.addSeparator();
@@ -46,6 +46,7 @@ public class InterfaceDeJeu extends JFrame implements ActionListener {
         BorderLayout BO1 = new BorderLayout();
         this.setLayout(BO1);
         this.add(toolbar, BorderLayout.NORTH);
+        this.add(screen, BorderLayout.CENTER);
 
         bGererAchats.addActionListener(this);
         bGererVentes.addActionListener(this);

@@ -19,8 +19,4 @@ public class Horticulteur extends Personne {
 
     }
 
-    @Override
-    public void adhererCentrale(CentraleDAchat centrale) {
-
-    }
 }

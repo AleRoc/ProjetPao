@@ -9,9 +9,13 @@ import java.util.ArrayList;
  * Created by Roche on 25/11/2016.
  */
 public class Poulailler extends InstallationAnimaux {
-    protected ArrayList<Volaille> occupants = new ArrayList<Volaille>();
+    private ArrayList<Volaille> occupants = new ArrayList<>();
     protected int capaciteActuelle = occupants.size();
     protected int capaciteMax;
 
+
+    public ArrayList<Volaille> getOccupants() {
+        return occupants;
+    }
 
 }

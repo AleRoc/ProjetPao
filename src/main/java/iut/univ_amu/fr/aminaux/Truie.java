@@ -15,6 +15,13 @@ public class Truie extends Porcin {
         super(NOM, ESTMALE);
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Truie{" + NOM + " " + sexe + "}";
+    }
 
     public void manger() {
         super.manger();

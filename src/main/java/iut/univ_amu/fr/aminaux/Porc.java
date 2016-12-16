@@ -12,6 +12,14 @@ public class Porc extends Porcin {
         super(NOM, ESTMALE);
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Porc{" + NOM + " " + sexe + "}";
+    }
+
     public void vivre(){
         super.vivre(ESPERANCE_VIE, 0);
     }

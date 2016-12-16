@@ -10,16 +10,12 @@ import java.awt.event.ActionListener;
  */
 public class GestionAchats extends JFrame  implements ActionListener {
     private JButton bListe = new JButton("Liste des achats");
-    private JLabel lOffreVente = new JLabel();
 
 
     public GestionAchats() {
         InterfaceDeJeu frame = new InterfaceDeJeu();
-        frame.getScreen().setBorder(BorderFactory.createLineBorder(Color.red));
         frame.getScreen().add(bListe);
-        frame.getScreen().add(lOffreVente);
         bListe.addActionListener(this);
-        lOffreVente.setText("/*toutlemonde.getOffreVentes().toString()*/");
     }
 
     @Override

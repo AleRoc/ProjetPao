@@ -9,9 +9,14 @@ import java.util.ArrayList;
  * Created by Roche on 25/11/2016.
  */
 public class Etable extends InstallationAnimaux {
-    protected ArrayList<Bovin> occupants = new ArrayList<Bovin>();
+    private ArrayList<Bovin> occupants = new ArrayList<>();
     protected int capaciteActuelle = occupants.size();
     protected int capaciteMax;
+
+
+    public ArrayList<Bovin> getOccupants() {
+        return occupants;
+    }
 
 
 }

@@ -16,6 +16,13 @@ public class Poule extends Volaille {
         super(NOM, ESTMALE);
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Poule{" + NOM + " " + sexe + "}";
+    }
 
     public void manger() {
         super.manger();

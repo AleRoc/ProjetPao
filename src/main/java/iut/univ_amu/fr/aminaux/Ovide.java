@@ -6,7 +6,7 @@ package iut.univ_amu.fr.aminaux;
 public abstract class Ovide extends Animal {
     protected static final int ESPERANCE_VIE = 5;
     protected static final int BESOIN_NOURITURE = 20;
-    private static final int VIANDE_PRODUIT = 50;
+    private static final int VIANDE_PRODUIT = 100;
     //todo changer les variable static
 
     public Ovide(String nom, boolean estmale ) {

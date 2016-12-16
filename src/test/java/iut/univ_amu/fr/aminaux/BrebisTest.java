@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 public class BrebisTest extends TestCase {
 
     Brebis brebis = new Brebis();
-    Belier belier = new Belier();
+    Mouton mouton = new Mouton();
     public void testVivre() throws Exception {
         System.out.println("Test Vivre");
         brebis.vivre();
@@ -22,7 +22,7 @@ public class BrebisTest extends TestCase {
     public void testNaissance() throws Exception {
         System.out.println("Test produire");
         System.out.println("Gestation de la brebis : " + brebis.etatSante.get("gestation"));
-        belier.accoupler(brebis);
+        mouton.accoupler(brebis);
         System.out.println("Gestation de la brebis : " + brebis.etatSante.get("gestation"));
         brebis.vivre();
         System.out.println("Gestation de la brebis : " + brebis.etatSante.get("gestation"));

@@ -9,13 +9,11 @@ import java.util.ArrayList;
  * Created by Roche on 25/11/2016.
  */
 public abstract class InstallationAnimaux implements Installation {
-
     protected static int capaciteActuelle;
     protected static int capaciteMax;
-
     protected ArrayList<Animal> occupants;
 
-    protected void ajouterAnimal(Animal a) {
+    public void ajouterAnimal(Animal a) {
         occupants.add(a);
     }
 

@@ -19,9 +19,4 @@ public class Grossiste extends Personne {
     public void faireOffreAchat() {
 
     }
-
-    @Override
-    public void adhererCentrale(CentraleDAchat centrale) {
-
-    }
 }

@@ -19,6 +19,13 @@ public class Vache extends Bovin {
         super(NOM, ESTMALE);
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Vache {" + NOM + " " + sexe + "}";
+    }
 
     public void vivre() {
         super.vivre(ESPERANCE_VIE, TEMPS_GESTATION);

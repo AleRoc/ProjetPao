@@ -20,8 +20,4 @@ public class Arboriculteur extends Personne {
 
     }
 
-    @Override
-    public void adhererCentrale(CentraleDAchat centrale) {
-
-    }
 }

@@ -17,6 +17,14 @@ public class Brebis extends Ovide {
         super.manger();
     }
 
+    @Override
+    public String toString() {
+        String sexe;
+        if (ESTMALE) sexe = "male";
+        else sexe = "femelle";
+        return "Brebis{" + NOM + " " + sexe + "}";
+    }
+
     public Brebis() {
         super(NOM, ESTMALE);
     }
