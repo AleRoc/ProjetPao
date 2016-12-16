@@ -1,6 +1,7 @@
 package iut.univ_amu.fr;
 
 
+        import iut.univ_amu.fr.marche.Marche;
         import iut.univ_amu.fr.marche.PlaceMarche;
         import iut.univ_amu.fr.offre.OffreVente;
 
@@ -10,14 +11,14 @@ package iut.univ_amu.fr;
  * Created by Roche on 13/12/2016.
  */
 public class Controleur {
-    private ArrayList<PlaceMarche> listeMarche;
+    private Marche marches;
 
     public void choisirAcheteur(){
 
     }
 
     public void validerOffres(){
-        for (PlaceMarche marche : listeMarche){
+        for (PlaceMarche marche : marches.getListePlacesMarche()){
             for (OffreVente offre : marche.getListeAttente()){
                 //TODO conditions
             }
