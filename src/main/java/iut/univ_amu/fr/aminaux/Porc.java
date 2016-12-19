@@ -17,7 +17,7 @@ public class Porc extends Porcin {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Porc{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public void vivre(){

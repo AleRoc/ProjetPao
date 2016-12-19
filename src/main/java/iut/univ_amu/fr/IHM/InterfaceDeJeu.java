@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
  */
 public class InterfaceDeJeu extends JFrame implements ActionListener {
     private JScrollPane pane = new JScrollPane();
+    JToolBar toolbar = new JToolBar();
     private JPanel screen = new JPanel();
     private JPanel panJeu = new JPanel();
     private JPanel panSud = new JPanel();
@@ -30,14 +31,12 @@ public class InterfaceDeJeu extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
-        JToolBar toolbar = new JToolBar();
         toolbar.setRollover(true);
         toolbar.add(bGererAchats);
         toolbar.addSeparator();
         toolbar.add(bGererVentes);
         toolbar.addSeparator();
         toolbar.add(bGererAnimaux);
-        toolbar.add(new JComboBox(new String[]{"A","B","C"}));
         toolbar.addSeparator();
         toolbar.add(bGererStock);
         toolbar.addSeparator();
@@ -72,6 +71,9 @@ public class InterfaceDeJeu extends JFrame implements ActionListener {
 
     public JPanel getScreen() {
         return screen;
+    }
+    public JToolBar getToolbar() {
+        return toolbar;
     }
 
 }

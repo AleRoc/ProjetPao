@@ -21,7 +21,7 @@ public class Poule extends Volaille {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Poule{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public void manger() {

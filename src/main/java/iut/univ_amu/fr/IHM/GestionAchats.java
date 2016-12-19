@@ -9,17 +9,38 @@ import java.awt.event.ActionListener;
  * Created by zekil_000 on 13/12/2016.
  */
 public class GestionAchats extends JFrame  implements ActionListener {
-    private JButton bListe = new JButton("Liste des achats");
+    private Object[] elements = {"Achats du jour", "Achats réalisés", "Acheter"};
+    private JComboBox combobox = new JComboBox(elements);
+    private InterfaceDeJeu frame = new InterfaceDeJeu();
 
 
     public GestionAchats() {
-        InterfaceDeJeu frame = new InterfaceDeJeu();
-        frame.getScreen().add(bListe);
-        bListe.addActionListener(this);
+        GridLayout GL1 = new GridLayout(2,2);
+        frame.getScreen().setLayout(GL1);
+        frame.getToolbar().addSeparator();
+        getCombobox().setSelectedItem(4);
+        frame.getToolbar().add(combobox);
+        frame.getToolbar().addSeparator();
+        getCombobox().addActionListener(this);
+    }
+
+    public JComboBox getCombobox() {
+        return combobox;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        JComboBox cb = (JComboBox)e.getSource();
+        String text = (String) cb.getSelectedItem();
+        switch (text) {
+            case "Achats du jour":
+                break;
+            case "Achats réalisés":
+                break;
+            case "Acheter" :
+                break;
+            default :
+                break;
+        }
     }
 }

@@ -1,6 +1,8 @@
 package iut.univ_amu.fr.installations.installationAnimaux;
 
 import iut.univ_amu.fr.aminaux.Animal;
+import iut.univ_amu.fr.aminaux.Brebis;
+import iut.univ_amu.fr.aminaux.Mouton;
 import iut.univ_amu.fr.aminaux.Ovide;
 
 import java.util.ArrayList;
@@ -12,7 +14,6 @@ public class Bergerie extends InstallationAnimaux {
     private ArrayList<Ovide> occupants = new ArrayList<>();
     protected int capaciteActuelle = occupants.size();
     protected int capaciteMax;
-
 
     public ArrayList<Ovide> getOccupants() {
         return occupants;
@@ -27,9 +28,7 @@ public class Bergerie extends InstallationAnimaux {
                 '}';
     }
 
-    public void ajouterAnimal(Ovide a) {
-        occupants.add(a);
-    }
+    public void ajouterAnimal(Ovide a) {occupants.add(a);}
 
     protected void retirerAnimal(Ovide animal) {
         for (int i=0; i<occupants.size(); ++i) {

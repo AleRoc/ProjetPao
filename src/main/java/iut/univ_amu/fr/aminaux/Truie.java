@@ -20,7 +20,7 @@ public class Truie extends Porcin {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Truie{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public void manger() {

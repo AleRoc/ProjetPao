@@ -24,7 +24,7 @@ public class Vache extends Bovin {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Vache {" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public void vivre() {

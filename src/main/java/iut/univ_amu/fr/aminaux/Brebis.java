@@ -22,7 +22,7 @@ public class Brebis extends Ovide {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Brebis{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public Brebis() {
