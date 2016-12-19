@@ -36,16 +36,18 @@ public class PlaceMarche {
         listeOffres.remove(listeAttente.indexOf(offre));
     }
 
+    public void majMarche (OffreVente offre){
+        listeOffres.add(offre);
+        listeAttente.remove(offre);
+    }
+
+    //getters
+
     public ArrayList<OffreVente> getListeOffres() {
         return listeOffres;
     }
 
     public ArrayList<OffreVente> getListeAttente() {
         return listeAttente;
-    }
-
-    public void majMarche (OffreVente offre){
-        listeOffres.add(offre);
-        listeAttente.remove(offre);
     }
 }

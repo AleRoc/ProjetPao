@@ -9,14 +9,13 @@ import java.util.ArrayList;
  */
 public abstract class Personne extends Participant {
 
-    private String nom;
-    private String prenom;
-    private int age;
+    protected String prenom;
+    protected int age;
 
-    private float argent;
+    protected float argent;
 
-    private ArrayList<Installation> propriétés;
-    private ArrayList<CentraleDAchat> adherences;
+    protected ArrayList<Installation> propriétés;
+    protected ArrayList<CentraleDAchat> adherences;
     public abstract void faireOffreVente();
     public abstract void adhererCentrale(CentraleDAchat centrale);
 }

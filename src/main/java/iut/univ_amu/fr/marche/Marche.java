@@ -16,4 +16,10 @@ public class Marche {
         else
             return instance;
     }
+
+    //getters
+
+    public ArrayList<PlaceMarche> getListePlacesMarche() {
+        return listePlacesMarche;
+    }
 }
