@@ -1,29 +1,36 @@
 package iut.univ_amu.fr;
 
 
-        import iut.univ_amu.fr.marche.Marche;
-        import iut.univ_amu.fr.marche.PlaceMarche;
+        import iut.univ_amu.fr.offre.OffreAchat;
         import iut.univ_amu.fr.offre.OffreVente;
-
-        import java.util.ArrayList;
 
 /**
  * Created by Roche on 13/12/2016.
  */
 public class Controleur {
-    private Marche marches;
+    private Services services;
 
     public void choisirAcheteur(){
 
+        for (PlaceMarche marche : services.getPlacesMarche()){
+            for (OffreVente offreV : marche.getListeOffres()){
+                for (OffreAchat offreA: offreV.getOffresAchat()){
+                }// pour chaque offre d'achat
+            }// pour chaque offre de vente
+        }// pour chaque place de marche
     }
 
     public void validerOffres(){
-        for (PlaceMarche marche : marches.getListePlacesMarche()){
-            for (OffreVente offre : marche.getListeAttente()){
+        for (PlaceMarche marche : services.getPlacesMarche()){
+            for (OffreVente offreV : marche.getListeAttente()){
                 //TODO conditions
+                if (offreV.getPrix() <= 0) {//simple validation par le prix : pas de prix nul ou négatif
+                    offreV.getOffreur().retirerOffreVente(offreV);
+                    marche.retirerOffreVente(offreV);
+                }
+                else
+                    marche.majMarche(offreV);
             }
-
         }
-
     }
 }

@@ -1,5 +1,6 @@
 package iut.univ_amu.fr.offre;
 
+import iut.univ_amu.fr.PlaceMarche;
 import iut.univ_amu.fr.participants.Personne;
 import iut.univ_amu.fr.produit.ProduitFermier;
 
@@ -8,24 +9,41 @@ import java.util.ArrayList;
 /**
  ** Created by Roche on 13/12/2016.
  */
-public class OffreVente implements Comparable<OffreVente>{
+
+public class OffreVente{
     private Personne offreur;
-    private Integer numero = 0;
+    private PlaceMarche placeDeMarche;
     private String libelle;
-    private ArrayList<ProduitFermier> produitsVendus;
+    private ArrayList<ProduitFermier> produitsVendus = new ArrayList<>();
     private float prix;
     private int date;
-    private ArrayList<OffreAchat> offresAchat;
+    private ArrayList<OffreAchat> offresAchat = new ArrayList<>();
 
-    public OffreVente (ArrayList<ProduitFermier> produits, float prix, Personne vendeur){
-        produitsVendus = produits;
+    public OffreVente(Personne offreur, PlaceMarche placeDeMarche, ArrayList<ProduitFermier> produitsVendus, float prix) {
+        this.offreur = offreur;
+        this.placeDeMarche = placeDeMarche;
+        this.produitsVendus = produitsVendus;
         this.prix = prix;
-        libelle = produits.get(0).getClass().getName();
-        //TODO il faut réfléchir à la façon dont la date sera gérée: on prend simplement le numero de tour de jeu?
+        libelle = produitsVendus.get(0).getClass().getName();
     }
 
-    public void ajouterOffreAchat ( OffreAchat offre){
-        offresAchat.add(offre);
+    public void ajouterOffreAchat (OffreAchat offreA){
+        offresAchat.add(offreA);
+    }
+
+    public void retirerOffreAchat (OffreAchat offreA) { offresAchat.remove(offreA); }
+
+    public void ajouterProduits (ArrayList<ProduitFermier> produits)
+    {
+        if (0 < produits.size())
+            for (ProduitFermier p : produits)
+                produitsVendus.add(p);
+    }
+
+    public void retirerProduits (ArrayList<ProduitFermier> produits){
+        if (0 < produits.size())
+            for (ProduitFermier p : produits)
+                produitsVendus.remove(p);
     }
 
     //getters
@@ -34,8 +52,8 @@ public class OffreVente implements Comparable<OffreVente>{
         return offreur;
     }
 
-    public int getNumero() {
-        return numero;
+    public PlaceMarche getPlaceDeMarche() {
+        return placeDeMarche;
     }
 
     public String getLibelle() {
@@ -58,14 +76,9 @@ public class OffreVente implements Comparable<OffreVente>{
         return offresAchat;
     }
 
-    //setters
+    // setters
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    @Override
-    public int compareTo(OffreVente offre) {
-        return numero.compareTo(offre.numero);
+    public void setPrix(float prix) {
+        this.prix = prix;
     }
 }

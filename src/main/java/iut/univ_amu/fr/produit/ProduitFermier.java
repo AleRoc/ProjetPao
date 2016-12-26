@@ -12,4 +12,6 @@ public abstract class ProduitFermier {
     private ArrayList<Label> labels;
 
     public abstract void validerLabels();
+
+    public void deprecier(){ dureeVie -= 1; }
 }
