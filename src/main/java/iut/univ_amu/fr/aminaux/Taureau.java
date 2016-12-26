@@ -16,7 +16,7 @@ public class Taureau extends Bovin {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Taureau{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public void vivre(){

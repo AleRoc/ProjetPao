@@ -20,7 +20,7 @@ public class Mouton extends Ovide {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Mouton{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     void manger() {

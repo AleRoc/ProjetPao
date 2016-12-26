@@ -9,17 +9,37 @@ import java.awt.event.ActionListener;
  * Created by zekil_000 on 13/12/2016.
  */
 public class GestionProduction extends JFrame  implements ActionListener {
-    private JButton bListe = new JButton("Liste des produits finis");
+    private Object[] elements = {"Liste des produits finis", "Liste des ressources", "Produire"};
+    private JComboBox combobox = new JComboBox(elements);
+    private InterfaceDeJeu frame = new InterfaceDeJeu();
 
     public GestionProduction(){
-        InterfaceDeJeu frame = new InterfaceDeJeu();
-        frame.getScreen().setBorder(BorderFactory.createLineBorder(Color.red));
-        frame.getScreen().add(bListe);
-        bListe.addActionListener(this);
+        GridLayout GL1 = new GridLayout(2,2);
+        frame.getScreen().setLayout(GL1);
+        frame.getToolbar().addSeparator();
+        getCombobox().setSelectedItem(4);
+        frame.getToolbar().add(combobox);
+        frame.getToolbar().addSeparator();
+        getCombobox().addActionListener(this);
+    }
+
+    public JComboBox getCombobox() {
+        return combobox;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        JComboBox cb = (JComboBox)e.getSource();
+        String text = (String) cb.getSelectedItem();
+        switch (text) {
+            case "Liste des produits finis":
+                break;
+            case "Liste des ressources":
+                break;
+            case "Produire" :
+                break;
+            default :
+                break;
+        }
     }
 }

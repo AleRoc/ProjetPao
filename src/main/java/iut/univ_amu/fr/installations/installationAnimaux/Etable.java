@@ -1,7 +1,6 @@
 package iut.univ_amu.fr.installations.installationAnimaux;
 
-import iut.univ_amu.fr.aminaux.Animal;
-import iut.univ_amu.fr.aminaux.Bovin;
+import iut.univ_amu.fr.aminaux.*;
 
 import java.util.ArrayList;
 

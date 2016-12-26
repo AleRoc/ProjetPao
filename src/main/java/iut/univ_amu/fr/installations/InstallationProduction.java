@@ -10,7 +10,7 @@ public class InstallationProduction implements Installation {
     public void produireViande(){
         //TODO remplir la fonction
     }
-    public void produireressource() {
+    public void produireRessource() {
         //TODO remplir la fonction
     }
 }

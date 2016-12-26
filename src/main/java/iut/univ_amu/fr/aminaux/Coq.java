@@ -16,7 +16,7 @@ public class Coq extends Volaille {
         String sexe;
         if (ESTMALE) sexe = "male";
         else sexe = "femelle";
-        return "Coq{" + NOM + " " + sexe + "}";
+        return NOM  + " " + sexe + " ";
     }
 
     public void vivre(){
