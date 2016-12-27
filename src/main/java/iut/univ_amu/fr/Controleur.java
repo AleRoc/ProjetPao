@@ -17,6 +17,7 @@ public class Controleur {
         for (PlaceMarche marche : services.getPlacesMarche()){
             for (OffreVente offreV : marche.getListeOffres()){
                 for (OffreAchat offreA: offreV.getOffresAchat()){
+
                 }// pour chaque offre d'achat
             }// pour chaque offre de vente
         }// pour chaque place de marche
@@ -27,7 +28,7 @@ public class Controleur {
             for (OffreVente offreV : marche.getListeAttente()){
                 //TODO conditions
                 if (offreV.getPrix() <= 0) {//simple validation par le prix : pas de prix nul ou négatif
-                    offreV.getOffreur().retirerOffreVente(offreV);
+                    offreV.supprimer();
                     marche.retirerOffreVente(offreV);
                 }
                 else
