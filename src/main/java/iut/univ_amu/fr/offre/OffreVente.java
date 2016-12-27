@@ -19,6 +19,8 @@ public class OffreVente{
     private int date;
     private ArrayList<OffreAchat> offresAchat = new ArrayList<>();
 
+    // constructeurs
+
     public OffreVente(Personne offreur, PlaceMarche placeDeMarche, ArrayList<ProduitFermier> produitsVendus, float prix) {
         this.offreur = offreur;
         this.placeDeMarche = placeDeMarche;
@@ -26,6 +28,8 @@ public class OffreVente{
         this.prix = prix;
         libelle = produitsVendus.get(0).getClass().getName();
     }
+
+    // methodes
 
     public void ajouterOffreAchat (OffreAchat offreA){
         offresAchat.add(offreA);
@@ -44,6 +48,12 @@ public class OffreVente{
         if (0 < produits.size())
             for (ProduitFermier p : produits)
                 produitsVendus.remove(p);
+    }
+
+    public void supprimer(){
+        placeDeMarche.getListeAttente().remove(this);
+        placeDeMarche.getListeOffres().remove(this);
+        offreur.getOffresV().remove(this);
     }
 
     //getters

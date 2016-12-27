@@ -15,6 +15,13 @@ public class OffreAchat {
     private float plafond;
     private int date;
 
+    // methodes
+
+    public void supprimer(){
+        offreV.getOffreur().getOffresV().remove(this);
+        acheteur.getOffresA().remove(this);
+    }
+
     // constructeurs
 
     public OffreAchat (OffreVente offreV, Participant acheteur, int quantite, boolean qualite, float enchere){ //TODO remplacer qualite par un arraylist de labels, ou la fraicheur(actuellement qualite) serait un label

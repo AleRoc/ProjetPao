@@ -1,14 +1,16 @@
 package iut.univ_amu.fr;
 
 
-        import iut.univ_amu.fr.offre.OffreAchat;
-        import iut.univ_amu.fr.offre.OffreVente;
+import iut.univ_amu.fr.offre.OffreAchat;
+import iut.univ_amu.fr.offre.OffreVente;
 
 /**
  * Created by Roche on 13/12/2016.
  */
 public class Controleur {
     private Services services;
+
+    // methodes
 
     public void choisirAcheteur(){
 

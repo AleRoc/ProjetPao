@@ -12,11 +12,23 @@ public class Adherence {
     private boolean renouvellement = false;
     private int duree = 0;
 
+    // methodes
+
+    public void supprimer(){
+        centrale.getAdherences().remove(this);
+        adherent.getAdherences().remove(this);
+    }
+
+    // constructeur
+
     public Adherence(CentraleDAchat centrale, Personne adherent, boolean renouvellement, int duree) {
         this.centrale = centrale;
         this.adherent = adherent;
         this.renouvellement = renouvellement;
         this.duree = duree;
+
+        centrale.ajouterAdherence(this);
+        //L'ajout de l'adhérence à la liste d'adhérences de l'adhérent (oui c'est une vraie phrase qui a un vrai sens) est faite par l'adhérent.
     }
 
     // setters

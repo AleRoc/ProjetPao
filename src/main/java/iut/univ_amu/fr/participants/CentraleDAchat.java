@@ -1,7 +1,8 @@
 package iut.univ_amu.fr.participants;
 
-import iut.univ_amu.fr.marche.PlaceMarche;
-import iut.univ_amu.fr.produit.ProduitFermier;
+
+import iut.univ_amu.fr.offre.OffreAchat;
+import iut.univ_amu.fr.Adherence;
 
 import java.util.ArrayList;
 
@@ -10,15 +11,63 @@ import java.util.ArrayList;
  */
 public class CentraleDAchat extends Participant {
 
-    private ArrayList<Personne> membres;
-    //TODO Comment la centrale d'achat peut-elle savoir ce que veut ses membres. Il faudrait une liste d'OffreVente que les membres proposeraient et la centrale d'achat saurait quoi demander à acheter
+    private ArrayList<Adherence> adherences;
+    private ArrayList<OffreAchat> offresMembres;
+    private float cotisation;
+    private static int duree = 30;
 
-    public void ajouterMembre (Personne nouvMemrbe){
-        membres.add(nouvMemrbe);
+    // methodes
+
+    public void ajouterAdherence (Adherence adherence){
+        adherences.add(adherence);
     }
 
-    @Override
-    public void faireOffreAchat(PlaceMarche marche, ArrayList<ProduitFermier> produit, float enchere) {
+    public void retirerAdherence (Adherence a){
+        a.supprimer();
+    }
 
+    public void ajouterOffreAdhérent (OffreAchat o){
+        offresMembres.add(o);
+    }
+
+    public void retirerOffreAdhérent (OffreAchat o){
+        o.supprimer();
+    }
+
+    public void grouperOffres (){
+        for ( OffreAchat offreA : offresMembres){
+            //TODO trouver des offres de vente correspondantes, garder les plus intéressantes et créér des offres d'achat (qui iront dans l'arraylist<offreAchat> de la centrale (défini dans participant)) qui vont bien.
+        }
+    }
+
+    public void controlerCotisations(){
+        for(Adherence a : adherences){
+            if(0 == a.getDuree() && true == a.getRenouvellement() && a.getAdherent().getArgent() >= cotisation) { // si l'adhérence arrive à terme on renouvelle si cela est autorisé par l'adhérent et si l'adhérent a suffisamment de fonds
+                a.getAdherent().prelever(cotisation);
+                this.crediter(cotisation);
+                a.setDuree(duree);
+            }
+            else {// sinon l'adhérence est annulée
+                a.supprimer();
+            }
+        }
+    }
+
+    // getters
+
+    public ArrayList<Adherence> getAdherences() {
+        return adherences;
+    }
+
+    public ArrayList<OffreAchat> getOffresMembres() {
+        return offresMembres;
+    }
+
+    public float getCotisation() {
+        return cotisation;
+    }
+
+    public static int getDuree() {
+        return duree;
     }
 }
