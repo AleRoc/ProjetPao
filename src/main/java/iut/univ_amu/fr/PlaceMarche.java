@@ -31,7 +31,6 @@ public class PlaceMarche {
 
     public void vendre (OffreVente offreV, Map<OffreAchat, ArrayList<ProduitFermier>> produitsAchetés){ //pour une offre (produits a,b et c) le controleur aura décidé d'attribuer la vente des produits à tel et tel acheteur (a pour acheteur 1, b pour acheteur 2 et c pour un troisième par exemple)
         for (OffreAchat o : produitsAchetés.keySet() ){
-                o.getAcheteur().acquerirProduit(produitsAchetés.get(o));
         }
     }
 

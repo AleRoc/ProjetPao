@@ -14,7 +14,6 @@ import java.util.ArrayList;
  */
 public abstract class Participant {
     protected float argent;
-    protected Services services;
     protected ArrayList<OffreAchat> offresA = new ArrayList<>();
 
     protected ArrayList<Animal> mesAnimaux = new ArrayList<>(); //variable test pour le stockage provisoire des animaux et produits
@@ -31,8 +30,11 @@ public abstract class Participant {
     }
 
     public void faireOffreAchat(OffreVente offreV, int quantite, boolean qualite, float enchere ) {
-        if (quantite <= offreV.getProduitsVendus().size())
-            offreV.ajouterOffreAchat(new OffreAchat(offreV, this, quantite, qualite , enchere));
+        if (quantite <= offreV.getProduitsVendus().size()) {
+            OffreAchat o = new OffreAchat(offreV, this, quantite, qualite, enchere);
+            offreV.ajouterOffreAchat(o);
+            offresA.add(o);
+        }
     }
 
     public void retirerOffreAchat(OffreAchat offreA){

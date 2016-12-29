@@ -5,6 +5,7 @@ import iut.univ_amu.fr.participants.Personne;
 import iut.univ_amu.fr.produit.ProduitFermier;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  ** Created by Roche on 13/12/2016.
@@ -16,7 +17,7 @@ public class OffreVente{
     private String libelle;
     private ArrayList<ProduitFermier> produitsVendus = new ArrayList<>();
     private float prix;
-    private int date;
+    private Date date;
     private ArrayList<OffreAchat> offresAchat = new ArrayList<>();
 
     // constructeurs
@@ -35,7 +36,7 @@ public class OffreVente{
         offresAchat.add(offreA);
     }
 
-    public void retirerOffreAchat (OffreAchat offreA) { offresAchat.remove(offreA); }
+    public void retirerOffreAchat (OffreAchat offreA) { offreA.supprimer(); }
 
     public void ajouterProduits (ArrayList<ProduitFermier> produits)
     {
@@ -78,7 +79,7 @@ public class OffreVente{
         return prix;
     }
 
-    public int getDate() {
+    public Date getDate() {
         return date;
     }
 

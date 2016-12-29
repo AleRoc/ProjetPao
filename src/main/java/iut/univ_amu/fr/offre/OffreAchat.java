@@ -2,6 +2,9 @@ package iut.univ_amu.fr.offre;
 
 
 import iut.univ_amu.fr.participants.Participant;
+
+import java.util.Date;
+
 /**
  * Created by Roche on 13/12/2016.
  */
@@ -13,7 +16,7 @@ public class OffreAchat {
     private boolean qualite;
     private float enchere;
     private float plafond;
-    private int date;
+    private Date date;
 
     // methodes
 
@@ -69,7 +72,7 @@ public class OffreAchat {
         return plafond;
     }
 
-    public int getDate() {
+    public Date getDate() {
         return date;
     }
 
