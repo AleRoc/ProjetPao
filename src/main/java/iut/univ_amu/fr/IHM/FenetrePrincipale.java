@@ -47,6 +47,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
         lBienvenue.setForeground(new Color(10,223,0));
 
         this.getContentPane().add(lBienvenue,BorderLayout.NORTH);
+        bJouer.setPreferredSize(new Dimension (900, 50));
         this.getContentPane().add(bJouer, BorderLayout.SOUTH);
         this.setVisible(true);
 

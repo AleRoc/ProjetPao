@@ -4,7 +4,7 @@ package iut.univ_amu.fr.aminaux;
  * Created by Sylvai on 07/12/2016.
  */
 public class Mouton extends Ovide {
-    private static final String NOM = "Belier";
+    private static final String NOM = "Mouton";
     private static final boolean ESTMALE = true;
 
     public Mouton() {

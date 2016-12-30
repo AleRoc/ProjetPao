@@ -6,6 +6,7 @@ import iut.univ_amu.fr.offre.OffreVente;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 
 /**
  * Created by Roche on 13/12/2016.
@@ -23,7 +24,13 @@ public class Controleur {
                         Collections.sort(offreV.getOffresAchat(), new Comparator<OffreAchat>(){
                             @Override
                             public int compare(OffreAchat o1, OffreAchat o2) {
-                                return o1.getDate() - o2.getDate();
+                                if (o1.getDate().before(o2.getDate())) {
+                                    return -1;
+                                } else if (o1.getDate().after(o2.getDate())) {
+                                    return 1;
+                                } else {
+                                    return 0;
+                                }
                             }
                         });
                         break;
@@ -31,7 +38,7 @@ public class Controleur {
                         Collections.sort(offreV.getOffresAchat(), new Comparator<OffreAchat>(){
                             @Override
                             public int compare(OffreAchat o1, OffreAchat o2) {
-                                return Float.compare(o1.getEnchere(), o2.getEnchere());
+                                return Float.compare(o1.getEnchere(), o2.getEnchere()); //a tester mais sa me semble pas terrible
                             }
                         });
                         break;

@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Created by louis on 05/12/2016.
  */
 public abstract class ProduitFermier {
+    private String nom;
     private int dureeVieMax;
     private int dureeVie;
     private int quantite;
@@ -14,4 +15,6 @@ public abstract class ProduitFermier {
     public abstract void validerLabels();
 
     public void deprecier(){ dureeVie -= 1; }
+
+    public abstract String getNom();
 }

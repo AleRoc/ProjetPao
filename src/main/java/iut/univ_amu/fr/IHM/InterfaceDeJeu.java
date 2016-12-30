@@ -9,20 +9,14 @@ import java.awt.event.ActionListener;
  * Created by zekil_000 on 13/12/2016.
  */
 public class InterfaceDeJeu extends JFrame implements ActionListener {
-    private JScrollPane pane = new JScrollPane();
     JToolBar toolbar = new JToolBar();
     private JPanel screen = new JPanel();
     private JPanel panJeu = new JPanel();
-    private JPanel panSud = new JPanel();
-    private JPanel panNorth = new JPanel();
-    private JPanel panEast = new JPanel();
-    private JPanel panWest = new JPanel();
     private JButton bGererAnimaux = new JButton("Gestion animaux");
     private JButton bGererStock = new JButton("Gestion stocks");
     private JButton bGererProduction = new JButton("Gestion production");
     private JButton bGererVentes = new JButton("Gestion ventes");
     private JButton bGererAchats = new JButton("Gestion achats");
-    private JLabel lTitrePanel = new JLabel("Vous êtes dans la panneau de ");
 
 
     public InterfaceDeJeu() {

@@ -26,7 +26,7 @@ public class Settings extends JFrame implements ActionListener{
 
         public Settings(){
             this.setTitle("Settings");
-            this.setSize(500, 200);
+            this.setSize(500, 300);
             this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
             this.setLocationRelativeTo(null);
             this.setResizable(false);
@@ -35,6 +35,8 @@ public class Settings extends JFrame implements ActionListener{
             screen.add(pan1);
             GridLayout GL1 = new GridLayout(6,1);
             pan1.setLayout(GL1);
+
+            bOK.setPreferredSize(new Dimension(40, 40));
 
             pan1.add(new JLabel("Sélectionner les capacités de paysan que vous souhaitez avoir :"));
             pan1.add(cb1);

@@ -40,6 +40,7 @@ public class OffreAchat {
         this.quantité = quantité;
         this.qualite = qualite;
         this.plafond = plafond;
+        this.date = new Date(); //ou es qu'on met la date de depot de l'offre ?
     }
 
     // getters

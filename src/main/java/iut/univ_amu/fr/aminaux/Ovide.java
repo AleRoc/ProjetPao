@@ -13,7 +13,6 @@ public abstract class Ovide extends Animal {
         super(nom, estmale);
     }
 
-
     public int produireViande() {
         mourir();
         return VIANDE_PRODUIT;
