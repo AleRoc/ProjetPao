@@ -26,7 +26,7 @@ public class Adherence {
         this.adherent = adherent;
         this.renouvellement = renouvellement;
         this.duree = duree;
-
+        adherent.prelever(centrale.getCotisation());
         centrale.ajouterAdherence(this);
         //L'ajout de l'adhérence à la liste d'adhérences de l'adhérent (oui c'est une vraie phrase qui a un vrai sens) est faite par l'adhérent.
     }

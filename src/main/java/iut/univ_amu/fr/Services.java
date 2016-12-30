@@ -5,13 +5,15 @@ import iut.univ_amu.fr.participants.CentraleDAchat;
 import java.util.ArrayList;
 
 /**
- * Created by louis on 17/12/2016.
+ * Created by louis on 29/12/2016.
  */
-public class Services { //Singleton
-    private Services instance = new Services();
+public class Services {
+    private static Services ourInstance = new Services();
 
     private ArrayList<PlaceMarche> placesMarche = new ArrayList<>();
     private ArrayList<CentraleDAchat> centralesDAchat = new ArrayList<>();
+
+    // methodes
 
     public void ajouterPlaceDeMarche(PlaceMarche p){
         placesMarche.add(p);
@@ -27,10 +29,6 @@ public class Services { //Singleton
         centralesDAchat.remove(c);
     }
 
-    private Services(){}
-
-    public Services getInstance() { return instance; }
-
     // getters
 
     public ArrayList<PlaceMarche> getPlacesMarche() {
@@ -39,5 +37,14 @@ public class Services { //Singleton
 
     public ArrayList<CentraleDAchat> getCentralesDAchat() {
         return centralesDAchat;
+    }
+
+    // constructeurs
+
+    public static Services getInstance() {
+        return ourInstance;
+    }
+
+    private Services() {
     }
 }

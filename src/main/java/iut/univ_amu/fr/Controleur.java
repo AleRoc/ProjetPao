@@ -6,7 +6,6 @@ import iut.univ_amu.fr.offre.OffreVente;
 
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 
 /**
  * Created by Roche on 13/12/2016.
@@ -24,21 +23,16 @@ public class Controleur {
                         Collections.sort(offreV.getOffresAchat(), new Comparator<OffreAchat>(){
                             @Override
                             public int compare(OffreAchat o1, OffreAchat o2) {
-                                if (o1.getDate().before(o2.getDate())) {
-                                    return -1;
-                                } else if (o1.getDate().after(o2.getDate())) {
-                                    return 1;
-                                } else {
-                                    return 0;
-                                }
+                                return o1.getDate().compareTo(o2.getDate());
                             }
                         });
+
                         break;
                     case "enchere" :
                         Collections.sort(offreV.getOffresAchat(), new Comparator<OffreAchat>(){
                             @Override
                             public int compare(OffreAchat o1, OffreAchat o2) {
-                                return Float.compare(o1.getEnchere(), o2.getEnchere()); //a tester mais sa me semble pas terrible
+                                return Float.compare(o1.getEnchere(), o2.getEnchere());
                             }
                         });
                         break;
@@ -50,13 +44,10 @@ public class Controleur {
                             }
                         });
                         break;
-                    default:
+                    default :
                         System.out.println("On ne connait pas cette façon de trier.");
                         break;
-                }
-                for (OffreAchat offreA: offreV.getOffresAchat()){
-
-                }// pour chaque offre d'achat
+                }// tri selon les paramètres
             }// pour chaque offre de vente
         }// pour chaque place de marche
     }
@@ -67,7 +58,6 @@ public class Controleur {
                 //TODO conditions
                 if (offreV.getPrix() <= 0) {//simple validation par le prix : pas de prix nul ou négatif
                     offreV.supprimer();
-                    marche.retirerOffreVente(offreV);
                 }
                 else
                     marche.majMarche(offreV);

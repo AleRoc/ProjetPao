@@ -26,5 +26,19 @@ public abstract class ProduitFermier {
 
     public void deprecier(){ dureeVie -= 1; }
 
-    public abstract String getNom();
+    public int getDureeVieMax() {
+        return dureeVieMax;
+    }
+
+    public int getDureeVie() {
+        return dureeVie;
+    }
+
+    public int getQuantite() {
+        return quantite;
+    }
+
+    public ArrayList<Label> getLabels() {
+        return labels;
+    }
 }
