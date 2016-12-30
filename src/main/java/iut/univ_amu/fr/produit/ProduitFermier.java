@@ -6,6 +6,16 @@ import java.util.ArrayList;
  * Created by louis on 05/12/2016.
  */
 public abstract class ProduitFermier {
+    @Override
+    public String toString() {
+        return "ProduitFermier{" +
+                "nom='" + nom + '\'' +
+                ", dureeVieMax=" + dureeVieMax +
+                ", dureeVie=" + dureeVie +
+                ", quantite=" + quantite +
+                '}';
+    }
+
     private String nom;
     private int dureeVieMax;
     private int dureeVie;

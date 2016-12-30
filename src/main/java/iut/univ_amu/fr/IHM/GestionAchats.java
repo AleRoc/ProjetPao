@@ -15,8 +15,8 @@ public class GestionAchats extends JFrame  implements ActionListener {
 
 
     public GestionAchats() {
-        GridLayout GL1 = new GridLayout(2,2);
-        frame.getScreen().setLayout(GL1);
+        BorderLayout BL1 = new BorderLayout();
+        frame.getScreen().setLayout(BL1);
         frame.getToolbar().addSeparator();
         getCombobox().setSelectedItem(4);
         frame.getToolbar().add(combobox);
