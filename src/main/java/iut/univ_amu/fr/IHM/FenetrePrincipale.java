@@ -57,7 +57,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent evt) {
         if (evt.getSource() == bJouer)
             new Settings();
-            this.setVisible(false);
+            this.dispose();
     };
 
     public static void main( String[] args )
