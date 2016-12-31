@@ -57,7 +57,6 @@ public class GestionAnimaux extends JFrame  implements ActionListener, ItemListe
         panEtat.setPreferredSize(new Dimension(900,100));
         frame.getScreen().add(panEtat, BorderLayout.SOUTH);
 
-        getCombobox().setSelectedIndex(0);
         getCombobox().addActionListener(this);
         liste.addItemListener(this);
         bTuer.addActionListener(new ActionListener() {
