@@ -97,6 +97,24 @@ public class OffreVente{
 
     // methodes
 
+    @Override
+    public String toString() {
+        String str1 =  "OffreVente{" +
+                         "offreur=" + offreur +
+                         ", placeDeMarche=" + placeDeMarche +
+                         ", libelle='" + libelle + '\'' +
+                         ", produitsVendus=";
+        for (ProduitFermier PF : produitsVendus) {
+            str1 += " " + PF.toString();
+        }
+        str1 += "\n";
+        str1 += ", prix=" + prix +
+                ", date=" + date +
+                ", offresAchat=" + offresAchat +
+                '}';
+        return str1;
+    }
+
     /**
      * Ajoute une offre d'achat à la liste.
      *

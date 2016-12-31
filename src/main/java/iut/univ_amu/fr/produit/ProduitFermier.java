@@ -28,6 +28,10 @@ public abstract class ProduitFermier {
         return quantite;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
     public ArrayList<Label> getLabels() {
         return labels;
     }

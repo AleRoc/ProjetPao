@@ -1,5 +1,8 @@
 package iut.univ_amu.fr.IHM;
 
+import iut.univ_amu.fr.PlaceMarche;
+import iut.univ_amu.fr.offre.OffreVente;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +15,8 @@ public class GestionAchats extends JFrame  implements ActionListener {
     private Object[] elements = {"Achats du jour", "Achats réalisés", "Acheter"};
     private JComboBox combobox = new JComboBox(elements);
     private InterfaceDeJeu frame = new InterfaceDeJeu();
+    private PlaceMarche PM = new PlaceMarche();
+    private List liste = new List();
 
 
     public GestionAchats() {
@@ -21,6 +26,9 @@ public class GestionAchats extends JFrame  implements ActionListener {
         getCombobox().setSelectedItem(4);
         frame.getToolbar().add(combobox);
         frame.getToolbar().addSeparator();
+
+        frame.getScreen().add(liste, BorderLayout.WEST);
+
         getCombobox().addActionListener(this);
     }
 
@@ -38,6 +46,9 @@ public class GestionAchats extends JFrame  implements ActionListener {
             case "Achats réalisés":
                 break;
             case "Acheter" :
+                for(OffreVente OV : PM.getListeOffres()) {
+                    liste.add(OV.toString());
+                }
                 break;
             default :
                 break;

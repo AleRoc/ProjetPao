@@ -17,6 +17,7 @@ public class GestionVentes extends JFrame  implements ActionListener  {
     private Object[] elements = {"Ventes réalisées", "Ventes en cours"};
     private JComboBox combobox = new JComboBox(elements);
     private InterfaceDeJeu frame = new InterfaceDeJeu();
+    private PlaceMarche PM = new PlaceMarche();
     private List liste = new List();
 
     public GestionVentes(){
@@ -46,13 +47,13 @@ public class GestionVentes extends JFrame  implements ActionListener  {
             case "Ventes en cours" :
                 liste.removeAll();
                 //pour tout les offres de vente de la place du marché dont l'offreur est notre personnage'
-                /*for(OffreVente offreV : PlaceMarche.getInstance().getListeOffres()) {
-                    if (PlaceMarche.getInstance().getOffreur() == "MOI" ) {
+                for(OffreVente offreV : PM.getListeOffres()) {
+                    if (offreV.getOffreur().getNom() == "MOI" ) {
                         for (ProduitFermier produit : offreV.getProduitsVendus()) {
                             liste.add(produit.getNom());
                         }
                     }
-                }*/
+                }
                 break;
             default :
                 break;
